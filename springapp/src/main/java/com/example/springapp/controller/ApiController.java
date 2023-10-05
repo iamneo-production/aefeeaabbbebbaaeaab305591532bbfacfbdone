@@ -14,9 +14,7 @@ public class ApiController {
     @Autowired
     public ApiService apiService;
 
-    
-
-    @PostMapping("/")
+     @PostMapping("/")
     public boolean createMarathon(@RequestBody Marathon marathon) {
         return apiService.createMarathon(marathon);
     }
