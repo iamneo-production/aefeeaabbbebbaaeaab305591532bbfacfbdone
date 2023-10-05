@@ -14,19 +14,13 @@ public class ApiService {
     @Autowired
     public MarathonRepo marathonRepo;
 
-   
-
     public boolean createMarathon(Marathon marathon) {
         return marathonRepo.save(marathon) !=null?true:false;
     }
 
-   
-
     public Marathon getMarathonById(int id) {
         return marathonRepo.findById(id).orElse(null);
     }
-
-    
 
     public List<Marathon> getAllMarathons() {
         return marathonRepo.findAll();
